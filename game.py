@@ -131,14 +131,14 @@ class Game:
                     print(f"\nSorry {player}... The correct answer is '{k}'")
                     wrong += 1
                     count += 1
-                    print("\nPress Enter for next quote...")
-                    enter = input()
+                    enter = input("Press Enter...")
+                    break
                     
             if choice.lower() == k.lower():
                 print(f"\nYou got it, {player}!")
                 right += 1      
                 count += 1
-            enter = input("Press Enter for next quote...")
+                enter = input("Press Enter...")
         
         if count > 10:
             # Clear screen
@@ -147,5 +147,5 @@ class Game:
             enter = input("Press Enter to see your score...")
             
             clear()
-            print(f"You got {right} out of 10 correct. Thank you for playing!")       
+            print(f"You got {right} out of 10 correct. Thank you for playing!\n")       
                     
